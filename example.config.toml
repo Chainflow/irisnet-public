@@ -1,0 +1,39 @@
+# Operator address of your validator
+#Here it will be used to get staking of a validator.
+val_operator_addr = "iva1qq6clyah7ahsaj5fq6vw94pvp4d44nhurrthv"
+
+# Validator hex address
+#useful to know about missed blocks.
+validator_hex_addr = "4D6282086BD0EDBA71S666EF64DAA4616641A1A0C1"
+
+# Address of your lcd client
+lcd_endpoint = "http://localhost:1337"
+
+# External open RPC endpoint(secondary RPC other than your own validator).
+#useful to gather information like validator caught up, syncing and missed blocks etc.
+external_rpc = "http://localhost:26657"
+
+# Name of your validator
+#it will be displayed in telegram alerts
+validator_name = "Moniker"
+
+# Configure the threshold to receive missed block alerting
+missed_blocks_threshold = 4
+
+# Daily alerts of validator status
+[daily_alerts]
+alert_time1 = "07:23PM"
+alert_time2 = "08:15AM"
+
+[telegram]
+tg_chat_id = 228719200
+tg_bot_token="1117273891:AAEtr3ZU2xkiuAj5YSF4LBeu1fPF0T4xj-UI"
+
+[sendgrid]
+sendgrid_token = "1234567890"
+email_address = "xyz@domain.com"
+
+[influxdb]
+port = "8086"
+database = "iris_bot"
+username = "admin"
