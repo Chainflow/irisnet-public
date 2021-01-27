@@ -1,4 +1,20 @@
-## Iris Alertng Bot
+
+
+## Iris Alerting Bot
+
+Today [Chainflow](https://chainflow.io/staking) and [Vitwit](https://vitwit.com) are releasing an Iris Network alerting bot. It's a simple, yet effective, open source bot that sends Telegram or email alerts based on key Iris validator performance metrics.
+
+It also sends sanity checks twice per day. The sanity checks confirm the validator is voting as expected (if it is!).
+
+The bot is an offshoot of the [Cosmos Validator Mission Control monitoring and alerting tool](https://chainflow.io/cosmos-validator-mission-control/) we built. You can find [a similar bot for Cosmos here](https://github.com/Chainflow/cosmos-validator-mission-control/tree/master/alert-bot).
+
+We hope the Iris Network community finds this tool beneficial. It's part of our commitment to supporting the networks we believe in, within the resource constraints of a smaller, independent validator operator.
+
+You can find the bot here. Please leave any feedback in the same repo.
+
+P.S. - You can support this effort by [delegating to the Chainflow Iris Validator](https://iris.bigdipper.live/validator/iva1tsjrct9p7z2znsu4ehs69w5ydu5d5mu4sxst73) 🙏
+
+*(Originally published [here](https://chainflow.io/iris-network-alerting-bot/).)*
 
  -   **Iris alerting bot** will send alerts to your telegram account about your **validator status**(jailed or voting) and about **missed blocks** (based on the configured thershold).
 
