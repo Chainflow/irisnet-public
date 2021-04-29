@@ -20,8 +20,11 @@ type (
 
 	// ValidatorResp defines validator result on a particular height
 	ValidatorResp struct {
-		OperatorAddress string `json:"operator_address"`
-		Jailed          bool   `json:"jailed"`
+		Validator struct {
+			OperatorAddress string `json:"operator_address"`
+			Jailed          bool   `json:"jailed"`
+			Status          string `json:"status"`
+		} `json:"validator"`
 	}
 
 	// CommitInfo struct
