@@ -50,14 +50,14 @@ func GetMissedBlocks(cfg *config.Config, c client.Client) error {
 
 	resp, err := HitHTTPTarget(ops)
 	if err != nil {
-		log.Printf("Error: %v", err)
+		log.Printf("Error while getting /status resp: %v", err)
 		return err
 	}
 
 	var networkLatestBlock NetworkLatestBlock
 	err = json.Unmarshal(resp.Body, &networkLatestBlock)
 	if err != nil {
-		log.Printf("Error: %v", err)
+		log.Printf("Error while unmarshelling latest block resp : %v", err)
 		return err
 	}
 
