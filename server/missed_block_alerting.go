@@ -38,6 +38,7 @@ func SendSingleMissedBlockAlert(cfg *config.Config, c client.Client, addrExists 
 
 // GetMissedBlocks sends alerts of missed blocks according to the threshold given by user
 func GetMissedBlocks(cfg *config.Config, c client.Client) error {
+	log.Println("Coming inside missed blocks...")
 	bp, err := createBatchPoints(cfg.InfluxDB.Database)
 	if err != nil {
 		return err
@@ -76,7 +77,7 @@ func GetMissedBlocks(cfg *config.Config, c client.Client) error {
 	var b BlockResponse
 	err = json.Unmarshal(resp.Body, &b)
 	if err != nil {
-		log.Printf("Error: %v", err)
+		log.Printf("Error while unmarshelling block resp : %v", err)
 		return err
 	}
 
@@ -135,7 +136,7 @@ func GetMissedBlocks(cfg *config.Config, c client.Client) error {
 			}
 		}
 	} else {
-		log.Println("Got an empty response from external rpc block dataa...")
+		log.Println("Got an empty response from external rpc block data...")
 	}
 
 	return nil
